@@ -4,13 +4,17 @@ from django.views import View
 from .models import Mensaje
 
 # Create your views here.
+
+def home(request):
+    return render(request,'home.html')
+
 def ver_mensajes_recibidos(request):
     mensajes_recibidos = Mensaje.objects.filter(destinatario='Gaston')
-    return render(request, 'verMensajesRecibidos.html', {'mensajes': mensajes_recibidos})
+    return render(request, 'mensajesRecibidos.html', {'mensajes': mensajes_recibidos})
 
 def ver_mensajes_enviados(request):
     mensajes_enviados = Mensaje.objects.filter(remitente='Gaston')
-    return render(request, 'verMensajesEnviados.html', {'mensajes': mensajes_enviados})
+    return render(request, 'mensajesEnviados.html', {'mensajes': mensajes_enviados})
 
 def crear_mensaje(request):
     contexto = {

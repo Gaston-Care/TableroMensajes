@@ -11,15 +11,16 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="{% url 'crearMensaje' %}">Crear Mensaje</a></li>
-            <li><a href="{% url 'verMensajesRecibidos' %}">Ver Mensajes Recibidos</a></li>
-            <li><a href="{% url 'verMensajesEnviados' %}">Ver Mensajes Enviados</a></li>
+        <ul style="list-style-type: none;">
+            <p style="font-weight: bold; font-size: large;">OPCIONES</p>
+            <li><a href="{% url 'crear_mensaje' %}">Crear Mensaje</li><br>
+            <li><a href="{% url 'ver_mensajes_recibidos' %}">Ver Mensajes Recibidos</li><br>
+            <li><a href="{% url 'ver_mensajes_enviados' %}">Ver Mensajes Enviados</a></li><br>
         </ul>
     </nav>
 
     <div class="content">
-        {% block content %}{% endblock %}
+        {% block content %} {% endblock %}
     </div>
 
     <footer>
