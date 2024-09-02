@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}My Website{% endblock %}</title>
+    </head>
+
+    <body>
+    <header>
+        <h1>{% block header %}Welcome to My Website{% endblock %}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'crearMensaje' %}">Crear Mensaje</a></li>
+            <li><a href="{% url 'verMensajesRecibidos' %}">Ver Mensajes Recibidos</a></li>
+            <li><a href="{% url 'verMensajesEnviados' %}">Ver Mensajes Enviados</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+
+    </body>
+</html>
