@@ -9,12 +9,22 @@ def home(request):
     return render(request,'home.html')
 
 def ver_mensajes_recibidos(request):
+    destinatario_buscado = 'Gaston'
     mensajes_recibidos = Mensaje.objects.filter(destinatario='Gaston')
-    return render(request, 'mensajesRecibidos.html', {'mensajes': mensajes_recibidos})
+    contexto = {
+        'mensajes': mensajes_recibidos,
+        'destinatario': destinatario_buscado
+    }
+    return render(request, 'mensajesRecibidos.html', contexto)
 
 def ver_mensajes_enviados(request):
-    mensajes_enviados = Mensaje.objects.filter(remitente='Gaston')
-    return render(request, 'mensajesEnviados.html', {'mensajes': mensajes_enviados})
+    remitente_buscado = 'Facundo' 
+    mensajes_enviados = Mensaje.objects.filter(remitente=remitente_buscado)
+    contexto = {
+        'mensajes': mensajes_enviados,
+        'remitente': remitente_buscado
+    }
+    return render(request, 'mensajesEnviados.html', contexto)
 
 def crear_mensaje(request):
     contexto = {

@@ -7,5 +7,21 @@
 {% endblock %}
 
 {% block content %}
-    <p>Aqui estara el formulario a llenar</p>
+    <div class="form-container">
+        <form action="{{url}}" method="POST">
+            {% csrf_token %} 
+            <br><br>
+            <label style="font-size: 20px; color: #000; font-weight: bold; " for="texto_del_mensaje">Texto del Mensaje: </label>
+            <input style="width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 15px; font-weight: bold;" type="text" name="texto_del_mensaje" id="texto_del_mensaje" placeholder="Escribe el mensaje" required><br><br>
+
+            <label style="font-size: 20px; color: #000; font-weight: bold; " for="remitente">Remitente: </label>
+            <input style="width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 15px; font-weight: bold;" type="text" name="remitente" id="remitente" placeholder="Tu nombre" required><br><br>
+
+            <label style="font-size: 20px; color: #000; font-weight: bold; " for="destinatario">Destinatario: </label>
+            <input style="width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 15px; font-weight: bold;" type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario" required><br><br>
+
+            <input style=" color: #FFF; font-weight: bold; width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 17px; cursor: pointer; background-color: #e24800;" type="submit" value="Crear Mensaje">
+        </form>
+    </div>
+
 {% endblock %}

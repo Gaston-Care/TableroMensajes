@@ -1,0 +1,53 @@
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: aqua;
+}
+
+nav ul li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+body {
+    text-align: center;
+    background-color: grey;
+}
+
+#label-formulario {
+    font-size: 20px; 
+    color: #000; 
+    font-weight: bold;
+}
+
+#input-formulario {
+    width: 300px; 
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#boton-crear-mensaje {
+    color: #FFF; 
+    font-weight: bold; 
+    width: 300px; 
+    height: 30px; 
+    border-radius: 15px; 
+    border: none; 
+    text-align: center; 
+    font-size: 17px; 
+    cursor: pointer; 
+    background-color: #e24800;
+}
