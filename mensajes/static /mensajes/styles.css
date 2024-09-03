@@ -23,6 +23,10 @@ body {
     background-color: grey;
 }
 
+footer {
+    background-color: rgb(68, 68, 68);
+}
+
 #label-formulario {
     font-size: 20px; 
     color: #000; 

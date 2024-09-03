@@ -4,7 +4,6 @@ from django.views import View
 from .models import Mensaje
 
 # Create your views here.
-
 def home(request):
     return render(request,'home.html')
 
@@ -32,11 +31,11 @@ def crear_mensaje(request):
     }
     return render(request, 'crearMensaje.html', contexto)
 
-class TareaView(View):
+class MensajeView(View):
     def post (self,request):
-        texto_del_mensaje = request.POST.get('titulo') 
-        remitente = request.POST.get('descripcion') 
-        destinatario = request.POST.get('estado') 
+        texto_del_mensaje = request.POST.get('texto_del_mensaje') 
+        remitente = request.POST.get('remitente') 
+        destinatario = request.POST.get('destinatario') 
 
         mensaje = Mensaje(texto_del_mensaje=texto_del_mensaje, remitente=remitente, destinatario=destinatario)
         

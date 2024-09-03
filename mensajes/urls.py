@@ -1,9 +1,10 @@
 from django.urls import path
-from . import views
+from .views import MensajeView, crear_mensaje, home, ver_mensajes_enviados, ver_mensajes_recibidos
+
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('mensajesRecibidos', views.ver_mensajes_recibidos, name='ver_mensajes_recibidos'),
-    path('mensajesEnviados', views.ver_mensajes_enviados, name='ver_mensajes_enviados'),
-    path('crearMensaje', views.crear_mensaje, name='crear_mensaje'),
-    path('nuevoMensaje', views.TareaView.as_view(), name='nuevoMensaje'),
+    path('', home, name='home'),
+    path('mensajesRecibidos', ver_mensajes_recibidos, name='ver_mensajes_recibidos'),
+    path('mensajesEnviados', ver_mensajes_enviados, name='ver_mensajes_enviados'),
+    path('crearMensaje', crear_mensaje, name='crear_mensaje'),
+    path('nuevoMensaje', MensajeView.as_view(), name='nuevoMensaje'),
 ]
