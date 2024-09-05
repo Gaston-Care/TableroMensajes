@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.views import View
 from .models import Mensaje
 
@@ -8,22 +8,26 @@ def home(request):
     return render(request,'home.html')
 
 def ver_mensajes_recibidos(request):
-    destinatario_buscado = 'Gaston'
-    mensajes_recibidos = Mensaje.objects.filter(destinatario='Gaston')
+    destinatario_buscado = 'Martina'
+    mensajes_recibidos = Mensaje.objects.filter(destinatario=destinatario_buscado)
+    url = 'eliminar_mensaje'
     contexto = {
         'mensajes': mensajes_recibidos,
-        'destinatario': destinatario_buscado
+        'destinatario': destinatario_buscado,
+        'url': url
     }
-    return render(request, 'mensajesRecibidos.html', contexto)
+    return render(request, 'verMensajes.html', contexto)
 
 def ver_mensajes_enviados(request):
-    remitente_buscado = 'Facundo' 
+    remitente_buscado = 'Ezequiel' 
     mensajes_enviados = Mensaje.objects.filter(remitente=remitente_buscado)
+    url = 'eliminar_mensaje'
     contexto = {
         'mensajes': mensajes_enviados,
-        'remitente': remitente_buscado
+        'remitente': remitente_buscado,
+        'url': url
     }
-    return render(request, 'mensajesEnviados.html', contexto)
+    return render(request, 'verMensajes.html', contexto)
 
 def crear_mensaje(request):
     contexto = {
@@ -44,4 +48,10 @@ class MensajeView(View):
             return HttpResponse("Mensaje Creado Correctamente!", status =201)
         else:
             return HttpResponse("Error al crear el Mensaje!!", status=400)
-        
+
+def eliminar_mensaje(request):
+    mensaje_id = request.POST.get('mensaje_id')
+    mensaje = get_object_or_404(Mensaje, id=mensaje_id)
+    mensaje.delete()
+    return HttpResponse("Mensaje Borrado Correctamente!", status =201)
+    
