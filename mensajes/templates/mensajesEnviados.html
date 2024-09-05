@@ -12,6 +12,7 @@
         {% for mensaje in mensajes %}
             <li style="margin-top: 15px;">
                 <h3 style="margin-bottom: 5px; text-align: center; color: #FFF;">MENSAJE</h3>
+                <b>Id: </b>{{ mensaje.id }} <br>
                 <b>Texto del Mensaje: </b>{{ mensaje.texto_del_mensaje }} <br> 
                 <b>Remitente: </b>{{ mensaje.remitente }} <br>
                 <b>Destinatario: </b>{{ mensaje.destinatario }} <br>
