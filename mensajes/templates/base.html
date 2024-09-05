@@ -8,20 +8,20 @@
         <link rel="stylesheet" href="{% static 'mensajes/styles.css' %}">         
     </head>
 
-    <body style="background-color: grey; font-family: 'Courier New', Courier, monospace;">
-    <header style="text-align: center;">
+    <body>
+    <header>
         <h1>{% block header %}Welcome to My Website{% endblock %}</h1>
     </header>
 
-    <div style="display: flex; justify-content: center;">
+    <div class="navbar">
         {% include 'navbar.html' %}
     </div>
 
-    <div class="content" style="display: flex; justify-content: center;">
+    <div class="content">
         {% block content %} {% endblock %}
     </div>
 
-    <footer style="margin-bottom: 0; margin-top: 25px; text-align: center; background-color: rgb(68, 68, 68); padding: 2px;">
+    <footer>
         <p>&copy; 2024 - Tablero de Mensajes - gecare@udc.edu.ar</p>
     </footer>
 

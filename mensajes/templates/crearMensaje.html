@@ -7,20 +7,20 @@
 {% endblock %}
 
 {% block content %}
-    <div class="form-container" style="margin-bottom: 25px;">
+    <div class="form-container">
         <form method="POST" action="{{url}}">
             {% csrf_token %}
             <br><br>
-            <label style="font-size: 20px; color: #000; font-weight: bold; " for="texto_del_mensaje">Texto del Mensaje: </label>
-            <input style="width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 15px; font-weight: bold;" type="text" name="texto_del_mensaje" id="texto_del_mensaje" placeholder="Escribe el mensaje" required><br><br>
+            <label class="label-formulario" for="texto_del_mensaje">Texto del Mensaje: </label>
+            <input class="input-formulario" type="text" name="texto_del_mensaje" id="texto_del_mensaje" placeholder="Escribe el mensaje" required><br>
 
-            <label style="font-size: 20px; color: #000; font-weight: bold; " for="remitente">Remitente: </label>
-            <input style="width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 15px; font-weight: bold;" type="text" name="remitente" id="remitente" placeholder="Tu nombre" required><br><br>
+            <label class="label-formulario" for="remitente">Remitente: </label>
+            <input class="input-formulario" type="text" name="remitente" id="remitente" placeholder="Tu nombre" required><br>
 
-            <label style="font-size: 20px; color: #000; font-weight: bold; " for="destinatario">Destinatario: </label>
-            <input style="width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 15px; font-weight: bold;" type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario" required><br><br>
+            <label class="label-formulario" for="destinatario">Destinatario: </label>
+            <input class="input-formulario" type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario" required><br><br>
 
-            <input style=" color: #FFF; font-weight: bold; width: 300px; height: 30px; border-radius: 15px; border: none; text-align: center; font-size: 17px; cursor: pointer; background-color: #e24800;" type="submit" value="Crear Mensaje">
+            <input class="boton-crear-mensaje" type="submit" value="Crear Mensaje">
         </form>
     </div>
 

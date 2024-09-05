@@ -3,7 +3,9 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: large;
+    font-weight: 500;
 }
 
 nav ul li {
@@ -18,22 +20,50 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
+nav ul a {
+    color: #FFF;
+}
+
 body {
     text-align: center;
     background-color: grey;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 footer {
     background-color: rgb(68, 68, 68);
+    margin-bottom: 0;
+    margin-top: 25px;
+    text-align: center;
+    padding: 2px;
 }
 
-#label-formulario {
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    margin-bottom: 25px;
+}
+
+.label-formulario {
     font-size: 20px; 
     color: #000; 
-    font-weight: bold;
+    font-weight: bolder;
 }
 
-#input-formulario {
+.input-formulario {
     width: 300px; 
     height: 30px;
     border-radius: 15px;
@@ -41,9 +71,10 @@ footer {
     text-align: center;
     font-size: 15px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
-#boton-crear-mensaje {
+.boton-crear-mensaje {
     color: #FFF; 
     font-weight: bold; 
     width: 300px; 
@@ -54,4 +85,13 @@ footer {
     font-size: 17px; 
     cursor: pointer; 
     background-color: #e24800;
+    margin-bottom: 15px;
+}
+
+.lista-mensajes {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: large;
+    font-weight: 400;
 }
