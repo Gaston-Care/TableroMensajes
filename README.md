@@ -1,6 +1,6 @@
 # TableroMensajes
 
-Es un proyecto Django para gestionar mensajes en un tablero. El cual permite crear, ver mensajes recibidos, ver mensajes enviados y eliminar mensajes.
+Es un proyecto Django para gestionar mensajes en un tablero. El cual permite crear Mensajes, ver mensajes recibidos, ver mensajes enviados y eliminar mensajes.
 
 ## Descripción
 
@@ -47,11 +47,11 @@ En la terminal:
     Abre el navegador y visita http://127.0.0.1:8000/
 
 ## Uso
-home: Seleccione lo que desea hacer.
-Crear mensaje: Navega a la sección correspondiente para crear un nuevo mensaje.
-Ver mensajes recibidos: Ve a la sección de mensajes recibidos para revisar los mensajes recibido por un destinatario en especifico.
-Ver mensajes enviados: Ve a la sección de mensajes enviados para consultar los mensajes enviados por un remitente en especifico.
-Eliminar mensaje: ve a la sección correspondiente para eliminar un mensaje.
+- home: Seleccione lo que desea hacer.
+- Crear mensaje: Navega a la sección correspondiente para crear un nuevo mensaje.
+- Ver mensajes recibidos: Ve a la sección de mensajes recibidos para revisar los mensajes recibido por un destinatario en especifico.
+- Ver mensajes enviados: Ve a la sección de mensajes enviados para consultar los mensajes enviados por un remitente en especifico.
+- Eliminar mensaje: ve a la sección correspondiente para eliminar un mensaje.
 
 ## Contacto
     Para preguntas o soporte, contactese a gecare@udc.edu.ar

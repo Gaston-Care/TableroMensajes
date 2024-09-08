@@ -21,7 +21,7 @@
                     <!-- Formulario para eliminar mensaje -->
                     <form method="post" action="{{url}}">
                         {% csrf_token %}
-                        <input type="hidden" name="mensaje_id" value="{{ mensaje.id }}">
+                        <input type="hidden" name="mensaje_id" value="{{ mensaje.id }}"> <!-- input "escondido" que guarda la id del mensaje -->
                         <button type="submit">Eliminar Mensaje</button>
                     </form>
                 </li> <br>
@@ -39,7 +39,7 @@
                     <!-- Formulario para eliminar mensaje -->
                     <form method="post" action="{{url}}">
                         {% csrf_token %}
-                        <input type="hidden" name="mensaje_id" value="{{ mensaje.id }}">
+                        <input type="hidden" name="mensaje_id" value="{{ mensaje.id }}"> <!-- input "escondido" que guarda la id del mensaje -->
                         <button type="submit">Eliminar Mensaje</button>
                     </form>
                 </li> <br>
