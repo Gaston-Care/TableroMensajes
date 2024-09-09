@@ -52,8 +52,11 @@ class MensajeView(View):
             return HttpResponse("Error al crear el Mensaje!!", status=400)
 
 def eliminar_mensaje(request):
-    mensaje_id = request.POST.get('mensaje_id') # Guardo la id del mensaje a eliminar
-    mensaje = get_object_or_404(Mensaje, id=mensaje_id) # Obtengo el Mensaje que coincida con la id en la BDD
-    mensaje.delete() # Elimino el mensaje
-    return HttpResponse("Mensaje Borrado Correctamente!", status =201)
+    if request.method == 'POST':
+        mensaje_id = request.POST.get('mensaje_id') # Guardo la id del mensaje a eliminar
+        if not mensaje_id:
+            return HttpResponse("Id no obtenido")
+        mensaje = get_object_or_404(Mensaje, id=mensaje_id) # Obtengo el Mensaje que coincida con la id en la BDD
+        mensaje.delete() # Elimino el mensaje
+        return HttpResponse("Mensaje Borrado Correctamente!", status =200)
     

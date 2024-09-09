@@ -22,7 +22,7 @@
                     <form method="post" action="{{url}}">
                         {% csrf_token %}
                         <input type="hidden" name="mensaje_id" value="{{ mensaje.id }}"> <!-- input "escondido" que guarda la id del mensaje -->
-                        <button type="submit">Eliminar Mensaje</button>
+                        <button class="boton-crear-mensaje" type="submit" style="margin: 15px;">Eliminar Mensaje</button>
                     </form>
                 </li> <br>
             {% endfor %}
@@ -40,7 +40,7 @@
                     <form method="post" action="{{url}}">
                         {% csrf_token %}
                         <input type="hidden" name="mensaje_id" value="{{ mensaje.id }}"> <!-- input "escondido" que guarda la id del mensaje -->
-                        <button type="submit">Eliminar Mensaje</button>
+                        <button class="boton-crear-mensaje" type="submit" style="margin: 15px;">Eliminar Mensaje</button>
                     </form>
                 </li> <br>
             {% endfor %}

@@ -46,8 +46,8 @@ En la terminal:
 8. **Acceder a la Aplicacion**:
     Abre el navegador y visita http://127.0.0.1:8000/
 
-## Uso
-- home: Seleccione lo que desea hacer.
+## Uso y Funcionalidad
+- home: Aparecera una barra de navegacion, Seleccione lo que desea hacer.
 - Crear mensaje: Navega a la sección correspondiente para crear un nuevo mensaje.
 - Ver mensajes recibidos: Ve a la sección de mensajes recibidos para revisar los mensajes recibido por un destinatario en especifico.
 - Ver mensajes enviados: Ve a la sección de mensajes enviados para consultar los mensajes enviados por un remitente en especifico.
