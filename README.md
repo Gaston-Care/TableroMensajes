@@ -28,11 +28,10 @@ En la terminal:
     virtualenv -p /usr/bin/python3.10 nombre_del_entorno
 
 4. **Activar el entorno virtual**:
-    En Windows: 
-    .\nombre_del_entorno\Scripts\activate
 
-    En macOS/Linux:
-    source nombre_del_entorno/bin/activate
+    - En Windows: .\nombre_del_entorno\Scripts\activate
+
+    - En macOS/Linux: source nombre_del_entorno/bin/activate
 
 5. **Instalar las dependencias**:
     pip install -r requirements.txt
