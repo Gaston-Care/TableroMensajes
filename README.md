@@ -54,4 +54,4 @@ En la terminal:
 - Eliminar mensaje: ve a la sección correspondiente para eliminar un mensaje.
 
 ## Contacto
-    Para preguntas o soporte, contactese a gecare@udc.edu.ar
+    gecare@udc.edu.ar
